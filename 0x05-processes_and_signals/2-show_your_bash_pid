@@ -1,0 +1,4 @@
+#!/usr/bin/en bash
+#Displays lines containing bash word
+
+ps auxf | grep bash
