@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#Create /var/run/myscript.pid file containing PID
+
+file="/var/run/myscript.pid"
+
+if [ ! -e "$file" ]; then
+    touch "$file"
+fi
+
+sleep 2 &
+
+echo "$!" > "file"
+
+#Displays I hate the kill command containg SIGTERM signal
+trap 'echo "I hate the kill command"; rm "$file"; exit' SIGTERM SIGQUIT
+
+#Dispays Y U no love me?! SIGINT
+trap "echo Y U no love me?!" SIGINT
+
+while true; do
+    echo "To infinite and beyond"
+    sleep 2
+done
+
