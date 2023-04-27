@@ -2,7 +2,7 @@
 #Displays to infinity and beyond indefinitely
 #With sleep 2 between iteration
 
-trap "echo I am invisible!!!"' SIGTERM
+trap "echo I am invisible!!!" SIGTERM
 while true; do
     echo "To infinity and beyond"
     sleep 2
