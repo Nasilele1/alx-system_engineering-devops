@@ -1,0 +1,6 @@
+#A bash script to start the process
+#!/bin/bash
+while [[ true ]]
+do
+    sleep 2
+done
