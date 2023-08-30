@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # Define variables for the server's IP address and the private key path
-SERVER_IP="100.26.132.37"
-PRIVATE_KEY_PATH="~/.ssh/school"
-
 # Use ssh with single-character flags to connect to the server as the user 'ubuntu'
 # -i specifies the identity (private key) file
 # -oStrictHostKeyChecking=no disables strict host key checking
+SERVER_IP="100.26.132.37"
+PRIVATE_KEY_PATH="~/.ssh/school"
 ssh -i "$PRIVATE_KEY_PATH" -oStrictHostKeyChecking=no "ubuntu@$SERVER_IP"
 
